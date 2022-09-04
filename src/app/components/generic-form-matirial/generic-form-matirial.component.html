@@ -1,0 +1,20 @@
+<form [formGroup] = "formGroup" *ngIf="formGroup && formFields.length > 0">
+  <div class="row">
+    <div *ngFor="let item of formFields" [ngClass]="item.wide === 'true' ? 'col-12' : 'col-6'">
+      <app-email-field *ngIf="item['data-type'] === 'email' && item['type'] === 'string'" [lable]="item.lable" [name] = "item.id" [control] = "formGroup.controls[item.id]"  [appearance]="'outline'"></app-email-field>
+      <app-text-field *ngIf="item['data-type'] == null && item['type'] === 'string'" [lable]="item.lable" [name] = "item.id" [control] = "formGroup.controls[item.id]"  [appearance]="'outline'"></app-text-field>
+      <app-number-field *ngIf="item['data-type'] == null && item['type'] === 'long'" [lable]="item.lable" [name] = "item.id" [control] = "formGroup.controls[item.id]"  [appearance]="'outline'"></app-number-field>  
+      <app-textarea-field  *ngIf="item['data-type'] == 'textarea' && item['type'] === 'string'" [lable]="item.lable" [name] = "item.id" [control] = "formGroup.controls[item.id]"  [appearance]="'outline'" [maxLength] = "item.maxlength"></app-textarea-field>
+      <app-phone-number-field *ngIf="item['data-type'] == 'phoneNumber' && item['type'] === 'string'" [lable]="item.lable" [name] = "item.id" [control] = "formGroup.controls[item.id]"  [appearance]="'outline'" [countryCode] = "item['country-code']"></app-phone-number-field>
+      <app-datepicker-field  *ngIf="item['type'] === 'date'" [lable]="item.lable" [name] = "item.id" [control] = "formGroup.controls[item.id]"  [appearance]="'outline'"></app-datepicker-field>
+      <app-checkbox-field  *ngIf="item['data-type'] == 'checkbox' && item['type'] === 'boolean'" [lable]="item.lable" [name] = "item.id" [control] = "formGroup.controls[item.id]"  [appearance]="'outline'"></app-checkbox-field>
+      <app-slide-toggle-field *ngIf="item['data-type'] == 'slide-toggle' && item['type'] === 'boolean'" [lable]="item.lable" [name] = "item.id" [control] = "formGroup.controls[item.id]"  [appearance]="'outline'"></app-slide-toggle-field>
+      <app-radio-group-field  *ngIf="item['data-type'] == null && item['type'] === 'enum'" [lable]="item.lable" [name] = "item.id" [control] = "formGroup.controls[item.id]"  [appearance]="'outline'" [options]="item.options"></app-radio-group-field>
+      <app-divider-field  *ngIf="item['data-type'] === 'divider'" [control] = "formGroup.controls[item.id]"></app-divider-field>
+      <app-amount-field  *ngIf="item['data-type'] == 'amount' && item['type'] === 'long'" [lable]="item.lable" [name] = "item.id" [control] = "formGroup.controls[item.id]"  [appearance]="'outline'" [suffix]="item.suffix" [prefix] ="item.prefix"></app-amount-field>
+      <app-select-field *ngIf="item['data-type'] == 'select' && item['type'] === 'enum'" [lable]="item.lable" [name] = "item.id" [control] = "formGroup.controls[item.id]"  [appearance]="'outline'" [options]="item.options"></app-select-field>
+      <app-html-field  [htmlStr] = "formGroup.controls[item.id].value" *ngIf="item['data-type'] === 'html' && item['type'] === 'string'" [lable]="item.lable" [name] = "item.id" [control] = "formGroup.controls[item.id]"  [appearance]="'outline'"></app-html-field>
+      <app-paragraph-field [paragraphText] = "formGroup.controls[item.id].value" *ngIf="item['data-type'] === 'paragraph' && item['type'] === 'string'" [lable]="item.lable" [name] = "item.id" [control] = "formGroup.controls[item.id]"  [appearance]="'outline'"></app-paragraph-field>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,9 @@
+<mat-form-field class="datepicker-field" [appearance]="appearance">
+    <mat-label>{{lable}}</mat-label>
+    <input [formControl]="control" matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <mat-error *ngIf="control.hasError('required')">
+        Field is <strong>required</strong>
+    </mat-error>
+</mat-form-field>

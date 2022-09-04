@@ -1,0 +1,4 @@
+<div class="actions">
+    <button mat-button color="primary" [disabled]="formGroup.invalid" (click)="complateTask()">Complate</button>
+    <button *ngIf="showBackButton" (click)="back()" mat-button>Back</button>
+</div>

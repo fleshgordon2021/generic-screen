@@ -1,0 +1,7 @@
+<mat-form-field class="number-field" [appearance]="appearance">
+    <mat-label>{{lable}}</mat-label>
+    <input type="number" matInput [name]="name" [formControl]="control" >
+    <mat-error *ngIf="control.hasError('required')">
+        Field is <strong>required</strong>
+    </mat-error>
+</mat-form-field>

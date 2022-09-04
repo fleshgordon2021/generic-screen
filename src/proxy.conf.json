@@ -1,0 +1,12 @@
+{
+    "/engine-rest": {
+        "target": "http://localhost:8080",
+        "secure": false,
+        "logLevel": "debug"
+    },
+    "/next-task": {
+        "target": "http://localhost:3000",
+        "secure": false,
+        "logLevel": "debug"
+    }
+  }

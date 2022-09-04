@@ -1,0 +1,11 @@
+<mat-form-field class="select-field"  [appearance]="appearance">
+    <mat-label>{{lable}}</mat-label>
+    <mat-select [formControl]="control">
+      <mat-option *ngFor="let option of options" [value]="option.value">
+        {{option.viewValue}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="control.hasError('required')">
+        Field is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
