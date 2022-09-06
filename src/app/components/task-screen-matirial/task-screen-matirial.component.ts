@@ -1,14 +1,13 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Subscription } from 'rxjs/internal/Subscription';
 import { Task } from '../../model/task';
 import { BpmnService } from '../../services/bpmn.service';
 import { combineLatest } from 'rxjs';
-import { TaskRouterService } from 'src/app/services/task-router.service';
-import { TaskCommand } from 'src/app/model/util/task-command';
-import { CommandMessage } from 'src/app/model/command/command-message';
-import { SpinnerService } from 'src/app/services/spinner.service';
+import { TaskRouterService } from '../../services/task-router.service';
+import { TaskCommand } from '../../model/util/task-command';
+import { CommandMessage } from '../../model/command/command-message';
+import { SpinnerService } from '../../services/spinner.service';
 
 @Component({
   selector: 'app-task-screen-matirial',

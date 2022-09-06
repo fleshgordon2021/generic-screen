@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewChecked, ChangeDetectorRef, Component } from '@angular/core';
 import { SpinnerService } from './services/spinner.service';
 
 @Component({
@@ -6,9 +6,13 @@ import { SpinnerService } from './services/spinner.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewChecked{
   title = 'generic-screen';
   constructor(
-    public  spinerService: SpinnerService
+    public  spinerService: SpinnerService,
+    private cdr: ChangeDetectorRef
   ) {}
+  ngAfterViewChecked(): void {
+    this.cdr.detectChanges();
+  }
 }

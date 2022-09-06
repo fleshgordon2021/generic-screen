@@ -1,12 +1,12 @@
 import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { CommandMessage } from 'src/app/model/command/command-message';
-import { Task } from 'src/app/model/task';
-import { TaskCommand } from 'src/app/model/util/task-command';
-import { BpmnService } from 'src/app/services/bpmn.service';
-import { CommonService } from 'src/app/services/common.service';
-import { SpinnerService } from 'src/app/services/spinner.service';
-import { TaskRouterService } from 'src/app/services/task-router.service';
+import { CommandMessage } from '../../model/command/command-message';
+import { Task } from '../../model/task';
+import { TaskCommand } from '../../model/util/task-command';
+import { BpmnService } from '../../services/bpmn.service';
+import { CommonService } from '../../services/common.service';
+import { SpinnerService } from '../../services/spinner.service';
+import { TaskRouterService } from '../../services/task-router.service';
 
 @Component({
   selector: 'app-generic-actions',

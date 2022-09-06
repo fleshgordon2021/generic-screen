@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SpinnerService } from 'src/app/services/spinner.service';
+import { SpinnerService } from '../../services/spinner.service';
 import { BpmnService } from '../../services/bpmn.service';
 import { GenericFormBaseComponent } from '../generic-form-base/generic-form-base.component';
 

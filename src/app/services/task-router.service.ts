@@ -1,7 +1,6 @@
 import { Injectable, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
-import { Task } from '../model/task';
 import { SseServiceService } from './SseService.service';
 
 @Injectable({

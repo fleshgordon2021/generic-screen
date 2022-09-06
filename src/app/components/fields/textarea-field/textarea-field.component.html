@@ -1,7 +1,8 @@
-<mat-form-field class="number-field" [appearance]="appearance">
+<mat-form-field class="textarea-field" [appearance]="appearance">
     <mat-label>{{lable}}</mat-label>
-    <textarea  matInput [maxLength]="maxLength" [name]="name" [formControl]="control" ></textarea>
-    <mat-hint align="end">{{ 'Max length is ' + maxLength + ' characters'}}</mat-hint>
+    <textarea *ngIf="maxLength > 0" matInput [maxLength]="maxLength" [name]="name" [formControl]="control" ></textarea>
+    <textarea *ngIf="!maxLength" matInput [name]="name" [formControl]="control" ></textarea>
+    <mat-hint *ngIf="maxLength" align="end">{{ 'Max length is ' + maxLength + ' characters'}}</mat-hint>
     <mat-error *ngIf="control.hasError('required')">
         Field is <strong>required</strong>
     </mat-error>

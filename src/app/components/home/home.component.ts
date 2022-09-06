@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { BpmnService } from '../../services/bpmn.service';
 import { v4 as uuidv4 } from 'uuid';
-import { ProcessData } from 'src/app/model/process-data';
-import { TaskRouterService } from 'src/app/services/task-router.service';
-import { SpinnerService } from 'src/app/services/spinner.service';
+import { ProcessData } from '../../model/process-data';
+import { TaskRouterService } from '../../services/task-router.service';
+import { SpinnerService } from '../../services/spinner.service';
 
 @Component({
   selector: 'app-home',

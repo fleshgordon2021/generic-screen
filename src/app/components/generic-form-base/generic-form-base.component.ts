@@ -1,12 +1,12 @@
 import { Directive, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { XMLParser } from 'fast-xml-parser';
-import { FormField } from 'src/app/model/form-field';
-import { ProcessDefinition } from 'src/app/model/process-definition';
-import { Task } from 'src/app/model/task';
-import { TaskCommand } from 'src/app/model/util/task-command';
-import { BpmnService } from 'src/app/services/bpmn.service';
-import { SpinnerService } from 'src/app/services/spinner.service';
+import { FormField } from '../../model/form-field';
+import { ProcessDefinition } from '../../model/process-definition';
+import { Task } from '../../model/task';
+import { TaskCommand } from '../../model/util/task-command';
+import { BpmnService } from '../../services/bpmn.service';
+import { SpinnerService } from '../../services/spinner.service';
 
 @Directive({
   selector: 'app-generic-form-base'
