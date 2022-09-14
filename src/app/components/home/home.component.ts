@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { ProcessData } from '../../model/process-data';
 import { TaskRouterService } from '../../services/task-router.service';
 import { SpinnerService } from '../../services/spinner.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(
     private bpmn: BpmnService,
     private taskRouterService: TaskRouterService,
-    private spinnerService: SpinnerService
+    private spinnerService: SpinnerService,
+    private router: Router
   ) { }
   ngOnDestroy(): void {
   
@@ -36,5 +38,8 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.spinnerService.showSpinner.next(false);
       }
     );
+  }
+  public getList() {
+    this.router.navigate(['/list-surveys']);
   }
 }

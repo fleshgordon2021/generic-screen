@@ -1,8 +1,12 @@
 .example-card {
-    max-width: 400px;
+    max-width: 29.5vw;
     margin: 7vh auto;
   .card-image:hover {
     cursor: pointer;  
+  }
+  .card-image {
+    height: 60vh;
+    width: 29.5vw;
   }
 }
   

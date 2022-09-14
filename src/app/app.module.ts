@@ -40,7 +40,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { HtmlFieldComponent } from './components/fields/html-field/html-field.component';
 import { ParagraphFieldComponent } from './components/fields/paragraph-field/paragraph-field.component';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ListSurveysComponent } from './components/list-surveys/list-surveys.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -64,7 +67,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     AmountFieldComponent,
     SelectFieldComponent,
     HtmlFieldComponent,
-    ParagraphFieldComponent
+    ParagraphFieldComponent,
+    ListSurveysComponent
   ],
   imports: [
     BrowserModule,
@@ -86,7 +90,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatSelectModule,
     MatMenuModule,
     MatIconModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [TaskRouterService],
   bootstrap: [AppComponent]
